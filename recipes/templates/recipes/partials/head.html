@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
+    integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css"
+    integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css"
+    integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
@@ -16,8 +23,8 @@
   <title>Receitas</title>
   <style>
     :root {
-      --color-primary: #269fe6;
-      --color-primary-hover: #2086c2;
+      --color-primary: #48bf53;
+      --color-primary-hover: #004d25;
       --color-primary-dark: #13141f;
       --color-primary-dark-hover: #212336;
       --color-primary-light: #d4ecfa;
@@ -57,7 +64,8 @@
 
       --spacing-gutter-medium: 3rem;
       --spacing-gutter-large: 4rem;
-  }
+    }
+
     * {
       padding: 0;
       margin: 0;
@@ -74,7 +82,12 @@
       background: var(--color-gray-1);
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: var(--font-headings);
     }
 
@@ -87,7 +100,7 @@
       margin: 0 auto;
       padding: var(--spacing-gutter-medium);
     }
-    
+
     .logo-header {
       font-size: var(--spacing-gutter-large);
       color: var(--color-white);
@@ -102,6 +115,49 @@
 
     .logo-header-icon {
       margin: 2rem;
+    }
+
+    .search-form {
+      border: .2rem solid var(--color-primary-dark);
+      max-width: 64rem;
+      margin: 0 auto;
+      border-radius: .4rem;
+      position: relative;
+      transition: all 300ms ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .search-input,
+    .search-button {
+      border: none;
+      background: none;
+      outline: none;
+      padding: 1rem;
+      transition: all 300ms ease-in-out;
+    }
+
+    .search-input {
+      width: 100%;
+      padding-right: 3rem;
+    }
+    .search-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .search-button:focus {
+      margin: 2px;
+      padding: 3px;
+    }
+
+    .search-form:focus-within {
+      border-color: var(--color-primary);
+      background-color: var(--color-white);
+    }
+
+    .search-form:focus-within .search-button {
+      color: var(--color-primary);
     }
   </style>
 </head>
